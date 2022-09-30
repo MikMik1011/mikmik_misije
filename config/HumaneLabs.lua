@@ -1,29 +1,27 @@
-Config = {}
-Config.Debug = {}
+Config.HumaneLabs = {}
 
-Config.Debug.Print = true
-Config.Debug.RandomBoolAlwaysTrue = false
-Config.Debug.Commands = false 
+Config.HumaneLabs.RewardItem = "pancir"
+Config.HumaneLabs.RewardMinMax = vector2(10, 30)
 
--- POCETAK MISIJE COORDS 707.21740722656,-966.90234375,30.412853240967
-Config.LesterNPCModel = "ig_lestercrest" 
-Config.LesterNPCCoords = {
-	Factory = vector4(705.79870605469,-963.70623779297,30.395345687866, 168.0), 
-	Garage = vector4(1208.7364501953,-3115.0866699219,5.540301322937, 35.00)
+
+Config.HumaneLabs.MaxHackAttempts = 4
+
+Config.HumaneLabs.ObjectiveMsgs = {
+	"Idi do ~y~Humane Labs~w~-a.",
+	"~r~Obezbedjenje ~w~te je primetilo i upalilo alarm! Pronadji ~b~kljuc od vozila~w~!",
+	"Nasli ste ~b~kljuc od kamiona~w~, sada idite do njega i otkljucajte ga!",
+	"Otkljucali ste ~b~vozilo~w~, sada sednite u njega i vozite u ~y~garazu na dockovima~w~!"
 }
 
-Config.DrawDistance = 30.0
-
-Config.RewardItem = "pancir"
-Config.RewardMinMax = vector2(10, 30)
-
-Config.CooldownDuration = 10 * 1000
-Config.MaxHackAttempts = 4
+Config.HumaneLabs.BlipMsgs = {
+	Hack = "Hakovanje kljuca od Humane Labs kamiona",
+	Finish = "Garaza za ostavljanje Humane Labs kamiona",
+}
 
 
-Config.MarkerLokacije = {
+Config.HumaneLabs.Locations = {
 
-	Kraj = {
+	Finish = {
 		{
 			--name = "dock", 
 			Pos   = { x = 1204.0261230469, y = -3116.9357910156, z = 4.5438208580017 }, -- 1204.0261230469,-3116.9357910156, 5.5403003692627
@@ -33,7 +31,7 @@ Config.MarkerLokacije = {
 		},
 	},
 
-	Kljuc = {
+	Hack = {
 		{
 			--name = "skroz iza",
 			Pos   = { x = 3538.6076660156, y = 3667.68359375, z = 27.121864318848 }, -- 3538.6076660156, 3667.68359375,28.121864318848  
@@ -52,7 +50,8 @@ Config.MarkerLokacije = {
 	},
 }
 
-Config.CarSpawns = {
+Config.HumaneLabs.CarModel = "boxville3"
+Config.HumaneLabs.CarSpawns = {
 
 	{		-- donja garaza desno
 		coords = vector3(3612.9125976563, 3740.7314453125, 28.69602394104),
@@ -76,11 +75,11 @@ Config.CarSpawns = {
 
 }
 
-Config.SpawnChance = 100 -- in %
-Config.DropChance = 10 -- in %
+Config.HumaneLabs.SpawnChance = 100 -- in %
+Config.HumaneLabs.DropChance = 0 -- in %
 
 
-Config.PedSpawns = {
+Config.HumaneLabs.PedSpawns = {
 
 	{	-- sniper na zgradi kod ulaza
 		coords = vector3(3459.5212402344, 3760.9504394531, 43.369163513184), --OBAVEZNO 
@@ -777,7 +776,7 @@ Config.PedSpawns = {
 
 }
 
-Config.PedModels = {
+Config.HumaneLabs.PedModels = {
 	"g_m_y_korlieut_01",
 	"g_m_m_casrn_01",
 	"mp_m_securoguard_01",
@@ -803,7 +802,7 @@ Config.PedModels = {
 
 }
 
-Config.Weapons = {
+Config.HumaneLabs.Weapons = {
 	"WEAPON_ASSAULTRIFLE",
 	"WEAPON_CARBINERIFLE",
 	"WEAPON_SPECIALCARBINE",
